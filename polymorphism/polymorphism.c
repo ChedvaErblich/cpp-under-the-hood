@@ -195,30 +195,6 @@ void doFormatterArray()
     }
 }
 
-
-
-/*
-void doFormatterPtrs()
-{
-    printf("\n--- start doFormatterPtrs() ---\n\n");
-
-    DefaultTextFormatter* pfmt[] =
-            {
-                    new PrePostDollarFixer("!!! ", " !!!"),
-            new Multiplier(4),
-            new PrePostChecker()
-            };
-
-    for (int i = 0; i < 3; ++i)
-        pfmt[i]->print("Hello World!");
-
-    for (int i = 2; i >= 0; --i)
-        delete pfmt[i];
-
-    printf("\n--- end doFormatterPtrs() ---\n\n");
-}
-*/
-
 void doFormatterDynamicArray()
 {
     int i = 0;
@@ -263,14 +239,13 @@ void doFormatterDynamicArray()
 
       doMultiplier();
 
-       doFormatterArray();
-      /*   doFormatterPtrs();*/
-     doFormatterDynamicArray();
+      doFormatterArray();
+      doFormatterDynamicArray();
 
-    printf("\n--- End main() ---\n\n");
+      printf("\n--- End main() ---\n\n");
 
-    PrePostHashFixer_Dtor(&hfix);
+      PrePostHashFixer_Dtor(&hfix);
 
-    return 0;
+      return 0;
 }
 
